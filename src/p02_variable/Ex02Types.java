@@ -43,5 +43,7 @@ public class Ex02Types {
     System.out.println(ex02Types.l1);
     System.out.println(ex02Types.f1);
     System.out.println(ex02Types.d1);
+    System.out.println(ex02Types.str);
+    System.out.println(ex02Types.animal);
   }
 }
