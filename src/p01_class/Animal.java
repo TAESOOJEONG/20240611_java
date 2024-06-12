@@ -9,10 +9,18 @@ public class Animal {
   4) 클래스를 사용하려면 인스턴스로 만들어야 한다.
   5) 클래스는 new를 통해 인스턴스를 생성할 수 있다.
   */
+
   public int legs;
   String color;
 
   public void run() {
     System.out.println(legs);
+  }
+}
+
+// 하나의 파일에 main method 복수개 가능
+class Foo{
+  public static void main(String[] args) {
+
   }
 }
