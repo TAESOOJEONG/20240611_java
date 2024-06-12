@@ -31,5 +31,14 @@ public class Ex05char {
       System.out.println("공백이 같습니다.");
     }
 
+    // 특수 문자 리터럴
+    char c4 = '\''; // ' 출력
+    char c5 = '\"'; // " 출력
+    char c6 = '\\'; // \ 출력
+    char c7 = '\b'; // 백스페이스
+    char c8 = '\t'; // tab
+    char c9 = '\n'; // 개행,한줄내려쓰기
+    char c10 = '\r'; // 캐리지 리턴
+    char c11 = '\f'; // 폼피드
   }
 }
