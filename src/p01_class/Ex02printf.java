@@ -2,6 +2,7 @@ package p01_class;
 
 public class Ex02printf {
   public static void main(String[] args) {
+    System.out.println(7+7+"7"+7+7);
     System.out.print("저 산자락에 긴 노을지면");
     System.out.print("\n");
     System.out.print("걸음걸음도 살며시 달님이 \t 오시네 ");

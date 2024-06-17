@@ -74,13 +74,20 @@ public class EX01declare {
     System.out.println(Math.max(1, 3));
     System.out.println(MyMath.share(10, 3));
     System.out.println(MyMath.remain(10, 3));
+    MyMath.shareRemain(10, 3);
 
+    System.out.println(MyMath.add(1,3));
   }
 
 }
 
 class MyMath {
+  // 매서드가 가지는 성격
+  // 1) 객체의 속성(상태)을 처리하는 기능
+  // 2) 객체의 속성(상태)을 온전하게 만들어 줌.
+  // 3) 보호기능 :: ( tv의 채널,볼륨 )
   static double add(int n1, int n2) {
+    // return n1+ n2 + 0.0;
     return (double) (n1 + n2);
   }
 
@@ -106,11 +113,14 @@ class MyMath {
     return s1 % s2;
 
 
-
   }
+
   public static void shareRemain(int n1, int n2) {
-    System.out.println("몫 : " + share(n1, n2));
-    System.out.println("나머지 : " + remain(n1, n2));
+    // System.out.println("몫 : " + share(n1, n2));
+    //System.out.println("나머지 : " + remain(n1, n2));
+    System.out.println("몫은" + share(n1, n2) + "나머지는" + remain(n1, n2));
+    System.out.printf("몫 : %d 나머지 :%d \n", share(n1, n2), remain(n1, n2));
+    System.out.println(String.format("몫은 %d 나머지는 %d", share(n1, n2), remain(n1, n2)));
   }
 
 }
