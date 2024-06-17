@@ -24,7 +24,7 @@ public class Ex02Types {
 
 
   public static void main(String[] args) {
-    /*    지역변수는 사용하기 위해서 반드시 할당을 해야함*/
+    /*    지역변수는 사용하기 위해서 반드시 할당을 해야함    */
     boolean power = true; // 논리형 1byte , true, false 값을 가짐
     char c1 = 'A';        // 문자형 2byte , 0~65535, 1글자만 가능
     byte b1 = 10;         // 정수형 1byte , -128 ~ +127

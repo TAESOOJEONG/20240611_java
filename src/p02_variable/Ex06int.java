@@ -2,7 +2,7 @@ package p02_variable;
 
 import common.Utils;
 
-public class ex06int {
+public class Ex06int {
   public static void main(String[] args) {
     byte b1 = 100;
     //byte b2 = 200;
@@ -29,6 +29,12 @@ public class ex06int {
     long l2 = 200; // long = int, long 12 = (long) 200; 묵시적 형변환
 
     int i2 = (int) l2; // 큰범위가 작은 범위로 올 때는 명시적 선언 ex (int)
+    long result = i2 + l1;
+    Utils.typeOf(result); //long과 연산을 할 경우 long타입으로 형변환
+
+    int i3 = b1; // int=byte :: 묵시적 형변환
+    byte b5 =(byte) i3; // 명시적 형변환
+
 
   }
 }

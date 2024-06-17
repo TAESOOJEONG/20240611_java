@@ -4,8 +4,6 @@ public class Ex01Location {
   /*
     1. 변수의 선언위치 :: 전역 , 지역
   */
-
-
   int sum = 0; //멤버 번수는 전역변수(global variable)
   //  int sum = 1; // 중복 선언되어서 에러 발생
 
