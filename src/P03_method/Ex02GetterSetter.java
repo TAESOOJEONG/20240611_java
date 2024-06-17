@@ -3,6 +3,10 @@ package P03_method;
 public class Ex02GetterSetter {
   public static void main(String[] args) {
     Person p1 = new Person();
+    p1.setName("JTS");
+    p1.setId("admin");
+    p1.setPass("1234");
+    p1.setMobile("010-3911-7066");
     /*p1.id = "admin";
     p1.pass = "1234";
     p1.pass = "1111";*/
@@ -21,14 +25,13 @@ class Person {
   public String getName() {
     return name;
   }
+
   public String getId() {
     return id;
   }
+
   public String getPass() {
     return pass;
-  }
-  public String getMobile() {
-    return mobile;
   }
 
   public void setName(String name) {
@@ -47,7 +50,9 @@ class Person {
     this.mobile = mobile;
   }
 
+  public String getMobile() {
+    return mobile;
 
-
+  }
 }
 
