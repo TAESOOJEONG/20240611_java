@@ -20,6 +20,12 @@ public class Ex03ConstructorA {
 
 }
 class Employee{
+  {
+    System.out.println("Initial Block instance");
+  }
+  static {
+    System.out.println("Initial Block static");
+  }
   private String ename;
   private int empno;
   private String hiredate;
