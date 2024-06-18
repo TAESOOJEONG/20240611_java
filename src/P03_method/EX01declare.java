@@ -119,7 +119,7 @@ class MyMath {
     // System.out.println("몫 : " + share(n1, n2));
     //System.out.println("나머지 : " + remain(n1, n2));
     System.out.println("몫은" + share(n1, n2) + "나머지는" + remain(n1, n2));
-    System.out.printf("몫 : %d 나머지 :%d \n", share(n1, n2), remain(n1, n2));
+    System.out.printf("몫 : %d ,나머지 :%d \n", share(n1, n2), remain(n1, n2));
     System.out.println(String.format("몫은 %d 나머지는 %d", share(n1, n2), remain(n1, n2)));
   }
 
