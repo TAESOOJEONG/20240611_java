@@ -2,7 +2,7 @@ package P03_method;
 
 import java.util.Scanner;
 
-public class Ex07condition {
+public class Ex07If {
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     System.out.println("학점 입력 : ");
