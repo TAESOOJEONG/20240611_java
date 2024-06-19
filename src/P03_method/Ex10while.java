@@ -21,19 +21,26 @@ public class Ex10while {
       j++;
       System.out.println();
     }
-
+/*
     System.out.println("=======내 마음의 숫자를 맞추기 게임=======");
     int random = (int)(Math.random()*100)+1;
     while (true) {
       int answer = Integer.parseInt(JOptionPane.showInputDialog("숫자를 입력하세요(종료는q)"));
       if (answer > random) {
-        System.out.println("작습니다.");
+        System.out.println(answer + "작습니다.");
       } else if (answer < random) {
-        System.out.println("큽니다");
+        System.out.println( answer + "큽니다");
       } else {
-        System.out.println("정답입니다.");
+        System.out.println(answer +"정답입니다.");
         break;
+        /*
+      do{
+
+      } while (true);
+
+
       }
+
     }
 
     /*
@@ -61,5 +68,17 @@ public class Ex10while {
       }
     }
     */
+
+    do {
+      int you = (int) (Math.random() * 100);
+      String input = JOptionPane.showInputDialog("가위(0),바위(1),보(2) 중에 입력하세요");
+      int me;
+      try {
+        me = Integer.parseInt(input);
+      } catch (Exception e) {
+        continue;
+      }
+    } while (true);
+
   }
 }
