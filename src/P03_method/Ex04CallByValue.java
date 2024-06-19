@@ -12,6 +12,7 @@ public class Ex04CallByValue {
     change(500);        // 값을 호출 -> int value
     System.out.println();
     change(data.value); // 값을 호출 -> int value
+    change((int)1.12f);// 값을 호출 -> int value 기본형타입의 명시적형변환
     change(data);       // 주소값 호출 -> Data data
     System.out.println(data.value);
 

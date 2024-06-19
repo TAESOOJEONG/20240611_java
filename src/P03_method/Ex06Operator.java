@@ -54,7 +54,9 @@ public class Ex06Operator {
                                 //      0 0 1 1
 
     System.out.println(~1);   //
-    //                           a가0보다 큰게 참일 때 : 거짓일 때
+
+
+    //                      a가0보다 큰게 참일 때 양수 : 거짓일 때 음수
     System.out.println("a:" + (a =-1) +(a>0 ? "양수":"음수"));
 
   }
