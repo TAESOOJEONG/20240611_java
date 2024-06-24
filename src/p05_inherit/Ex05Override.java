@@ -8,9 +8,7 @@ public class Ex05Override {
     Data d2 = new Data(1);
     System.out.println(d1);
     System.out.println(d2);
-    if (d1.equals(d2)) {
-      System.out.println("같다 ");
-    }
+    if (d1.equals(d2)) {System.out.println("같다 ");}
   }
 }
 
@@ -22,6 +20,7 @@ class Data {
 
   }
 
+  // 재정의
   @Override
   public String toString() {
     return "value : " + value;
