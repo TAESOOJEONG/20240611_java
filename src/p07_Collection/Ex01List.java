@@ -19,6 +19,7 @@ public class Ex01List {
     list.add(new Member("jGD", "1", "정길동"));
     list.add(10);
     list.add(true);
+    list.remove(2);
 
     System.out.println(list);
     //1. for index
@@ -27,7 +28,15 @@ public class Ex01List {
     //2. enhanced for
     for(Object o :list) Utils.typeOf(o);
 
-    //3. foreach
+    //3.iterator
+    /*Iterator it = list.iterator();
+    while (it.hasNext()) {
+      System.out.println(it.next());
+    }
+*/
+
+    //4. foreach
+
     // 익명객체는 일회성, 참조할 일 없는 경우
     list.forEach(new Consumer() {
       @Override
@@ -61,7 +70,7 @@ public class Ex01List {
 
     System.out.println(list);
     System.out.println(list.isEmpty());
-    List linkedList = new LinkedList();
+
 
 
   }
