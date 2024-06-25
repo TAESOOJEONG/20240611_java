@@ -2,6 +2,8 @@ package p06_javalang;
 
 import common.Utils;
 
+import java.util.StringJoiner;
+
 public class Ex01String {
   public static void main(String[] args) {
     String str1 = "hello";
@@ -45,5 +47,28 @@ public class Ex01String {
     System.out.println(str1.indexOf("l",3));
     // l을 k로 바꿈
     System.out.println(str1.replace("l","k"));
+    // o 를 없앰
+    System.out.println(str1.replace("o",""));
+    // split 을 이용하여 " " 공백이 있을때 ,로 분리
+    String[] arr = "Passion is genesis of genus".split(" ");
+    // System.out.println(Arrays.toString(arr));
+    String fileName = "abc.index.html";
+    System.out.println(fileName.substring(fileName.lastIndexOf(".")+1));
+    System.out.println(fileName.substring(fileName.indexOf(".")+1,(fileName.lastIndexOf("."))));
+    //
+    System.out.println("Hello world".toLowerCase());
+    System.out.println("Hello world".toUpperCase());
+    // 좌 우 공백삭제
+    System.out.println("   Hello world   ".trim());
+    // 2진수 -> 10진수
+    System.out.println(String.valueOf(0b100));
+    System.out.println(String.valueOf(00100));
+    System.out.println(String.valueOf(0xa0));
+    StringJoiner sj = new StringJoiner(" ","※","\"");
+    for (String s : arr){
+      sj.add(s);
+    }
+    System.out.println(sj.toString());
+
   }
 }

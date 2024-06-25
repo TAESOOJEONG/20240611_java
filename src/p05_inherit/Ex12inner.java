@@ -1,5 +1,5 @@
 package p05_inherit;
-
+//내부 클래스가 필요할 경우 나만 ㅏ용할 경우
 public class Ex12inner {
   public static void main(String[] args) {
     Outer o = new Outer();

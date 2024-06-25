@@ -1,5 +1,5 @@
 package p05_inherit;
-
+// 예외상황을 내가 커스터마이징 할 수 있다. ex 로그인익셉션 등
 public class Ex15MyException {
   public static void main(String[] args) {
     try {

@@ -1,5 +1,5 @@
 package p05_inherit;
-
+//인스턴스 1개만 쓰기위해 사용
 public class Ex11Singleton {
   public static void main(String[] args) {
     Singleton s1 = Singleton.getInstance();

@@ -1,5 +1,5 @@
 package p05_inherit;
-
+// 예외의 책임을 회피하려고 throws
 import java.io.IOException;
 
 public class Ex14throws {
