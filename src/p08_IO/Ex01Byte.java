@@ -25,15 +25,18 @@ public class Ex01Byte {
 
     byte[] tmp = new byte[4];
     input = new ByteArrayInputStream(inSrc);
-    while (input.available()>0){
+    while (input.available() > 0) {
       try {
         // input 을 읽어서 tmp 에 담음, read 읽은 글자수를 반환
         int length = input.read(tmp);
-        output.write(tmp);
+        // output.write(tmp);
+        output.write(tmp, 0, length);
+        outSrc = output.toByteArray();
+        System.out.println("tmp :" + Arrays.toString(outSrc));
+        System.out.println("tmp :" + Arrays.toString(tmp));
       } catch (IOException e) {
         throw new RuntimeException(e);
       }
-
     }
   }
 }
