@@ -4,6 +4,8 @@ import java.util.TreeSet;
 
 public class Ex07TreeSet {
   public static void main(String[] args) {
+    // TreeSet 정렬되는 기능을 가짐.
+    // 정렬될 수 있는 값들만 받음.
 
     TreeSet set = new TreeSet();
     set.add(new Ball(4));
@@ -13,15 +15,26 @@ public class Ex07TreeSet {
   }
 }
 
-class Ball {
+class Ball implements Comparable {
   private int num;
 
-    public Ball(int num) {
-      this.num=num;
+  public Ball(int num) {
+    this.num = num;
+  }
+
+  @Override
+  public int compareTo(Object o) {
+    if (o instanceof Ball) {
+      Ball b = (Ball) o;
+      // 뺄 때 0이면 같다, 음수면 작다, 양수면 크다.
+      return num - b.num;
+      // 역순 return -(num - b.num);
     }
+    return 0;
+  }
 
   @Override
   public String toString() {
-    return num + "" ;
+    return num + "";
   }
 }
