@@ -32,7 +32,7 @@ public class Ex04StackQueue {
     System.out.println(q);
 
     // collection 이전에 나온 버전 (동기화 포함)
-    //
+    // Vector 단점 동기화가 되지않음
     Vector v = new Vector();
     v.add(0);
     v.add("a");
