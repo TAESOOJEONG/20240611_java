@@ -1,4 +1,4 @@
-package p09_Thread;
+package p10_Thread;
 // Thread 를 1회 작동할 때 마다 해당 메서드를 확인한다.
 // 그래서 음수가 될 때는 인출을 진행하지 않는다.
 public class Ex02Synchronized {
