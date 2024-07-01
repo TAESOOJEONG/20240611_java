@@ -38,7 +38,7 @@ public class Ex01TcpipMultiChatCliant extends JFrame {
     ta.setFont(new Font("맑은 고딕", Font.PLAIN, 20));
     tf.setFont(new Font("맑은 고딕", Font.PLAIN, 20));
     try {
-      // 외부로 보내는 파이프
+      // 외부로 보내는 파이프 같은 역할
       Socket socket = new Socket(ip, 7777);
       out = new DataOutputStream(socket.getOutputStream());
       out.writeUTF(nickname);
@@ -52,7 +52,10 @@ public class Ex01TcpipMultiChatCliant extends JFrame {
       @Override
       public void actionPerformed(ActionEvent e) {
         try {
-          out.writeUTF(nickname + " : " + tf.getText());
+          String sendMsg = tf.getText();
+          if(sendMsg.equals("")) return;
+          out.writeUTF(nickname + " : " + sendMsg);
+          tf.setText("");
         } catch (IOException ex) {
           throw new RuntimeException(ex);
         }
@@ -92,6 +95,8 @@ public class Ex01TcpipMultiChatCliant extends JFrame {
         try {
           String msg = in.readUTF();
           System.out.println(msg);
+          ta.append(msg+"\n");
+          ta.setCaretPosition(ta.getDocument().getLength());
           // JTextArea.
 
         } catch (IOException e) {
