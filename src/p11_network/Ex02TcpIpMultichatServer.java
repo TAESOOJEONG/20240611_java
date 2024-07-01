@@ -25,7 +25,9 @@ public class Ex02TcpIpMultichatServer {
 
       while(true) {
         socket = serverSocket.accept();
-        System.out.println("Connected from ["+socket.getInetAddress() + ":"+socket.getPort()+"]");
+        System.out.println("Connected from ["
+            +socket.getInetAddress() + ":"+socket.getPort()+"]");
+
         ServerReceiver thread = new ServerReceiver(socket);
         thread.start();
       }
@@ -63,20 +65,20 @@ public class Ex02TcpIpMultichatServer {
       String name = "";
       try {
         name = in.readUTF();
-        sendToAll("#"+name+" 님이 입장하셨습니다.");
+        sendToAll(" # "+name+" 님이 입장하셨습니다.");
 
         clients.put(name, out);
-        System.out.println("Now Number of Connector is " + clients.size());
+        System.out.println("현재 접속자 수 : " + clients.size());
         while(in!=null) {
           sendToAll(in.readUTF());
         }
       } catch(IOException e) {
         // ignore
       } finally {
-        sendToAll("#"+name+" is disconnected");
+        sendToAll(" # "+name+" 님이 퇴장하셨습니다.");
         clients.remove(name);
         System.out.println("Terminated from ["+socket.getInetAddress()+":"+socket.getPort()+"]");
-        System.out.println("Now Number of Connector is " + clients.size());
+        System.out.println("현재 접속자 수 " + clients.size());
       } // try
     } // run
   } // ReceiverThread
